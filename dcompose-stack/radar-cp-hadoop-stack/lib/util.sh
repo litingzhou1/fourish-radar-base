@@ -137,6 +137,7 @@ self_signed_certificate() {
 letsencrypt_certonly() {
   SERVER_NAME=$1
   SSL_PATH="/etc/openssl/live/${SERVER_NAME}"
+#  SSL_PATH="/etc/openssl/live/${SERVER_NAME}"
   echo "==> Requesting Let's Encrypt SSL certificate for ${SERVER_NAME}"
 
   # start from a clean slate

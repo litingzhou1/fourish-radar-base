@@ -1,0 +1,1001 @@
+OS version: Linux tintin-OptiPlex-5060 5.8.0-44-generic #50~20.04.1-Ubuntu SMP Wed Feb 10 21:07:30 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+docker version: Docker version 20.10.5, build 55c4c88
+docker-compose version: docker-compose version 1.28.5, build c4eb3a1f
+==> Creating docker network - hadoop ALREADY EXISTS
+==> Checking docker external volumes
+==> Setting up topics
+Compiling schemas...
+===> Independent schemas:
+merged/commons/active/notification/notification.avsc
+merged/commons/active/opensmile/open_smile_2_audio_analysis.avsc
+merged/commons/active/opensmile/open_smile_2_audio_recording.avsc
+merged/commons/active/questionnaire/questionnaire.avsc
+merged/commons/active/task/task.avsc
+merged/commons/active/thincit/thinc_it_input_type.avsc
+merged/commons/active/thincit/thinc_it_trails.avsc
+merged/commons/catalogue/processing_state.avsc
+merged/commons/catalogue/time_window.avsc
+merged/commons/catalogue/unit.avsc
+merged/commons/connector/fitbit/fitbit_activity_heart_rate.avsc
+merged/commons/connector/fitbit/fitbit_activity_levels.avsc
+merged/commons/connector/fitbit/fitbit_intraday_heart_rate.avsc
+merged/commons/connector/fitbit/fitbit_intraday_steps.avsc
+merged/commons/connector/fitbit/fitbit_manual_data_entry.avsc
+merged/commons/connector/fitbit/fitbit_sleep_classic.avsc
+merged/commons/connector/fitbit/fitbit_sleep_stage.avsc
+merged/commons/connector/fitbit/fitbit_source.avsc
+merged/commons/connector/fitbit/fitbit_time_zone.avsc
+merged/commons/kafka/aggregate_key.avsc
+merged/commons/kafka/observation_key.avsc
+merged/commons/kafka/record_set.avsc
+merged/commons/monitor/application/application_device_info.avsc
+merged/commons/monitor/application/application_external_time.avsc
+merged/commons/monitor/application/application_record_counts.avsc
+merged/commons/monitor/application/application_server_status.avsc
+merged/commons/monitor/application/application_time_zone.avsc
+merged/commons/monitor/application/application_uptime.avsc
+merged/commons/monitor/questionnaire/questionnaire_completion_log.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_acceleration.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_battery_level.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_blood_pulse_wave.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_energy.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_galvanic_skin_response.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_heart_rate.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_heart_rate_variability.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_led_current.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_oxygen_saturation.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_ppg_raw.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_respiration_rate.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_temperature.avsc
+merged/commons/passive/bittium/bittium_faros_acceleration.avsc
+merged/commons/passive/bittium/bittium_faros_battery_level.avsc
+merged/commons/passive/bittium/bittium_faros_ecg.avsc
+merged/commons/passive/bittium/bittium_faros_inter_beat_interval.avsc
+merged/commons/passive/bittium/bittium_faros_temperature.avsc
+merged/commons/passive/empatica/empatica_e4_acceleration.avsc
+merged/commons/passive/empatica/empatica_e4_battery_level.avsc
+merged/commons/passive/empatica/empatica_e4_blood_volume_pulse.avsc
+merged/commons/passive/empatica/empatica_e4_electrodermal_activity.avsc
+merged/commons/passive/empatica/empatica_e4_inter_beat_interval.avsc
+merged/commons/passive/empatica/empatica_e4_sensor_status.avsc
+merged/commons/passive/empatica/empatica_e4_tag.avsc
+merged/commons/passive/empatica/empatica_e4_temperature.avsc
+merged/commons/passive/opensmile/open_smile_2_phone_audio.avsc
+merged/commons/passive/pebble/pebble2_acceleration.avsc
+merged/commons/passive/pebble/pebble2_battery_level.avsc
+merged/commons/passive/pebble/pebble2_heart_rate.avsc
+merged/commons/passive/pebble/pebble2_heart_rate_filtered.avsc
+merged/commons/passive/phone/phone_acceleration.avsc
+merged/commons/passive/phone/phone_battery_level.avsc
+merged/commons/passive/phone/phone_bluetooth_devices.avsc
+merged/commons/passive/phone/phone_call.avsc
+merged/commons/passive/phone/phone_contact_list.avsc
+merged/commons/passive/phone/phone_gyroscope.avsc
+merged/commons/passive/phone/phone_light.avsc
+merged/commons/passive/phone/phone_magnetic_field.avsc
+merged/commons/passive/phone/phone_relative_location.avsc
+merged/commons/passive/phone/phone_sms.avsc
+merged/commons/passive/phone/phone_sms_unread.avsc
+merged/commons/passive/phone/phone_step_count.avsc
+merged/commons/passive/phone/phone_usage_event.avsc
+merged/commons/passive/phone/phone_user_interaction.avsc
+merged/commons/passive/ppg/phone_camera_ppg.avsc
+merged/commons/passive/weather/local_weather.avsc
+merged/commons/stream/aggregator/numeric_aggregate.avsc
+merged/commons/stream/aggregator/phone_usage_aggregate.avsc
+merged/commons/stream/source_statistics.avsc
+===> Dependent schemas:
+merged/commons/active/thincit/thinc_it_code_breaker.avsc
+merged/commons/active/thincit/thinc_it_pdq.avsc
+merged/commons/active/thincit/thinc_it_spotter.avsc
+merged/commons/active/thincit/thinc_it_symbol_check.avsc
+merged/commons/connector/fitbit/fitbit_activity_log_record.avsc
+merged/commons/stream/aggregator/aggregate_list.avsc
+Creating RADAR-base topics...
+[main] INFO kafka.utils.Log4jControllerRegistration$ - Registered kafka:type=kafka.Log4jController MBean
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Initializing a new session to zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181.
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.13-2d71af4dbe22557fda74f9a9b4309b15a7487f03, built on 06/29/2018 00:39 GMT
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:host.name=f4cf67d87736
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.version=11.0.10
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.home=/usr/local/openjdk-11
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/usr/lib/radar-schemas-tools-0.5.1.jar:/usr/lib/radar-schemas-commons-0.5.1.jar:/usr/lib/radar-commons-server-0.12.1.jar:/usr/lib/radar-commons-0.12.1.jar:/usr/lib/kafka-connect-avro-converter-5.2.1.jar:/usr/lib/kafka-schema-registry-5.2.1.jar:/usr/lib/kafka-avro-serializer-5.2.1.jar:/usr/lib/kafka-schema-registry-client-5.2.1.jar:/usr/lib/avro-1.8.2.jar:/usr/lib/kafka_2.12-2.2.0-cp2.jar:/usr/lib/connect-json-2.2.0-cp2.jar:/usr/lib/jersey-media-json-jackson-2.28.jar:/usr/lib/jackson-datatype-jdk8-2.9.8.jar:/usr/lib/rest-utils-5.2.1.jar:/usr/lib/jackson-jaxrs-json-provider-2.9.8.jar:/usr/lib/jackson-module-jaxb-annotations-2.9.8.jar:/usr/lib/jackson-jaxrs-base-2.9.8.jar:/usr/lib/jackson-databind-2.9.9.jar:/usr/lib/jersey-container-servlet-2.27.jar:/usr/lib/jersey-container-servlet-core-2.28.jar:/usr/lib/jersey-bean-validation-2.27.jar:/usr/lib/jersey-server-2.28.jar:/usr/lib/hibernate-validator-5.1.3.Final.jar:/usr/lib/validation-api-2.0.1.Final.jar:/usr/lib/jackson-dataformat-yaml-2.9.9.jar:/usr/lib/argparse4j-0.8.1.jar:/usr/lib/okhttp-3.14.1.jar:/usr/lib/javax-websocket-server-impl-9.4.14.v20181114.jar:/usr/lib/websocket-server-9.4.14.v20181114.jar:/usr/lib/jetty-annotations-9.4.14.v20181114.jar:/usr/lib/jetty-plus-9.4.14.v20181114.jar:/usr/lib/jetty-webapp-9.4.14.v20181114.jar:/usr/lib/jetty-servlet-9.4.17.v20190418.jar:/usr/lib/jetty-jaas-9.4.14.v20181114.jar:/usr/lib/jetty-security-9.4.17.v20190418.jar:/usr/lib/jetty-server-9.4.17.v20190418.jar:/usr/lib/slf4j-simple-1.7.26.jar:/usr/lib/jersey-hk2-2.28.jar:/usr/lib/jackson-mapper-asl-1.9.13.jar:/usr/lib/jackson-core-asl-1.9.13.jar:/usr/lib/connect-api-2.2.0-cp2.jar:/usr/lib/kafka-clients-2.2.0-cp2.jar:/usr/lib/metrics-core-2.2.0.jar:/usr/lib/scala-logging_2.12-3.9.0.jar:/usr/lib/common-config-5.2.1.jar:/usr/lib/common-metrics-5.2.1.jar:/usr/lib/common-utils-5.2.1.jar:/usr/lib/zkclient-0.11.jar:/usr/lib/zookeeper-3.4.13.jar:/usr/lib/slf4j-api-1.7.26.jar:/usr/lib/jackson-annotations-2.9.8.jar:/usr/lib/jackson-core-2.9.9.jar:/usr/lib/jopt-simple-5.0.4.jar:/usr/lib/scala-reflect-2.12.8.jar:/usr/lib/scala-library-2.12.8.jar:/usr/lib/jersey-client-2.28.jar:/usr/lib/jersey-media-jaxb-2.28.jar:/usr/lib/jersey-common-2.28.jar:/usr/lib/hk2-locator-2.5.0.jar:/usr/lib/hk2-api-2.5.0.jar:/usr/lib/hk2-utils-2.5.0.jar:/usr/lib/jakarta.inject-2.5.0.jar:/usr/lib/jersey-entity-filtering-2.28.jar:/usr/lib/jakarta.ws.rs-api-2.1.5.jar:/usr/lib/snakeyaml-1.23.jar:/usr/lib/json-20180813.jar:/usr/lib/okio-1.17.2.jar:/usr/lib/websocket-servlet-9.4.14.v20181114.jar:/usr/lib/javax.servlet-api-3.1.0.jar:/usr/lib/jetty-servlets-9.4.14.v20181114.jar:/usr/lib/javax-websocket-client-impl-9.4.14.v20181114.jar:/usr/lib/websocket-client-9.4.14.v20181114.jar:/usr/lib/jetty-client-9.4.14.v20181114.jar:/usr/lib/jetty-http-9.4.17.v20190418.jar:/usr/lib/websocket-common-9.4.14.v20181114.jar:/usr/lib/jetty-io-9.4.17.v20190418.jar:/usr/lib/jakarta.annotation-api-1.3.4.jar:/usr/lib/zstd-jni-1.3.8-1.jar:/usr/lib/lz4-java-1.5.0.jar:/usr/lib/snappy-java-1.1.7.2.jar:/usr/lib/audience-annotations-0.5.0.jar:/usr/lib/osgi-resource-locator-1.0.1.jar:/usr/lib/paranamer-2.7.jar:/usr/lib/commons-compress-1.8.1.jar:/usr/lib/xz-1.5.jar:/usr/lib/jetty-jmx-9.4.14.v20181114.jar:/usr/lib/jetty-jndi-9.4.14.v20181114.jar:/usr/lib/jetty-xml-9.4.14.v20181114.jar:/usr/lib/jetty-util-9.4.17.v20190418.jar:/usr/lib/javax.inject-2.5.0-b42.jar:/usr/lib/javax.el-2.2.4.jar:/usr/lib/javax.el-api-2.2.4.jar:/usr/lib/javax.ws.rs-api-2.1.1.jar:/usr/lib/jaxb-api-2.3.0.jar:/usr/lib/activation-1.1.1.jar:/usr/lib/aopalliance-repackaged-2.5.0.jar:/usr/lib/javassist-3.22.0-CR2.jar:/usr/lib/jline-0.9.94.jar:/usr/lib/netty-3.10.6.Final.jar:/usr/lib/jboss-logging-3.1.3.GA.jar:/usr/lib/classmate-1.0.0.jar:/usr/lib/javax.websocket-api-1.0.jar:/usr/lib/jetty-continuation-9.4.14.v20181114.jar:/usr/lib/log4j-1.2.17.jar:/usr/lib/javax.annotation-api-1.2.jar:/usr/lib/asm-commons-7.0.jar:/usr/lib/asm-analysis-7.0.jar:/usr/lib/asm-tree-7.0.jar:/usr/lib/asm-7.0.jar:/usr/lib/javax.websocket-client-api-1.0.jar:/usr/lib/websocket-api-9.4.14.v20181114.jar
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.name=Linux
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.version=5.8.0-44-generic
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.name=root
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.home=/root
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/schema
+[main] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181 sessionTimeout=15000 watcher=kafka.zookeeper.ZooKeeperClient$ZooKeeperClientWatcher$@502f1f4c
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Waiting until connected.
+[main-SendThread(zookeeper-3:2181)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server zookeeper-3/172.19.0.4:2181. Will not attempt to authenticate using SASL (unknown error)
+[main-SendThread(zookeeper-3:2181)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to zookeeper-3/172.19.0.4:2181, initiating session
+[main-SendThread(zookeeper-3:2181)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server zookeeper-3/172.19.0.4:2181, sessionid = 0x378138e224e0002, negotiated timeout = 15000
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Connected.
+[main] INFO org.radarcns.schema.registration.KafkaTopics - Kafka brokers available. Waiting for topics to become available.
+[main] INFO org.apache.kafka.clients.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [PLAINTEXT://kafka-1:9092, PLAINTEXT://kafka-2:9092, PLAINTEXT://kafka-3:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.2.0-cp2
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: c4bca159dd111016
+[main] INFO org.radarcns.schema.registration.KafkaTopics - Creating topics. Topics marked with [*] already exist.
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_ecg
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_inter_beat_interval
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_temperature
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_sensor_status
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_local_weather
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_pebble_2_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_pebble_2_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_pebble_2_heartrate
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_pebble_2_heartrate_filtered
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_bluetooth_devices
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_call
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_contacts
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_gyroscope
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_light
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_magnetic_field
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_ppg
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_relative_location
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_sms
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_sms_unread
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_step_count
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_usage_event
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_usage_event_aggregated
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_usage_event_output
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_user_interaction
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_processed_audio
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_device_info
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_external_time
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_record_counts
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_server_status
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_time_zone
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_uptime
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_activity_log
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_intraday_heart_rate
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_intraday_steps
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_sleep_classic
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_sleep_stages
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_time_zone
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] notification_thinc_it
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_audio
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_completion_log
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_esm
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_patient_determined_disease_step
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_perceived_deficits_questionnaire
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_phq8
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_rses
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_timezone
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] source_statistics_android_phone
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] source_statistics_biovotion_vsm1
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] source_statistics_empatica_e4
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] task_2MW_test
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] task_romberg_test
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] task_tandem_walking_test
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_code_breaker
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_pdq5
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_spotter
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_symbol_check
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_trails
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Closing.
+[main] INFO org.apache.zookeeper.ZooKeeper - Session: 0x378138e224e0002 closed
+[main-EventThread] INFO org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x378138e224e0002
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Closed.
+Topics created.
+Registering RADAR-base schemas...
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Setting compatibility to NONE
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Compatibility set to NONE
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1Acceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1BatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_blood_volume_pulse schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1BloodPulseWave
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_energy schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1Energy
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_galvanic_skin_response schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1GalvanicSkinResponse
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_heartrate schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1HeartRate
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_heartrate_variability schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1HeartRateVariability
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_led_current schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1LedCurrent
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_oxygen_saturation schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1OxygenSaturation
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_ppg_raw schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1PpgRaw
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_respiration_rate schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1RespirationRate
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_temperature schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1Temperature
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosAcceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosBatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_ecg schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosEcg
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_inter_beat_interval schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosInterBeatInterval
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_temperature schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosTemperature
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4Acceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4BatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_blood_volume_pulse schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4BloodVolumePulse
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_electrodermal_activity schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4ElectroDermalActivity
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_inter_beat_interval schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4InterBeatInterval
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_sensor_status schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4SensorStatus
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_temperature schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4Temperature
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_local_weather schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.weather.LocalWeather
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_pebble_2_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.pebble.Pebble2Acceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_pebble_2_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.pebble.Pebble2BatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_pebble_2_heartrate schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.pebble.Pebble2HeartRate
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_pebble_2_heartrate_filtered schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.pebble.Pebble2HeartRateFiltered
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneAcceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneBatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_bluetooth_devices schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneBluetoothDevices
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_call schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneCall
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_contacts schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneContactList
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_gyroscope schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneGyroscope
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_light schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneLight
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_magnetic_field schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneMagneticField
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_ppg schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.ppg.PhoneCameraPpg
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_relative_location schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneRelativeLocation
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_sms schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneSms
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_sms_unread schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneSmsUnread
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_step_count schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneStepCount
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_usage_event schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneUsageEvent
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_user_interaction schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneUserInteraction
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_processed_audio schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.opensmile.OpenSmile2PhoneAudio
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_device_info schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationDeviceInfo
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_external_time schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationExternalTime
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_record_counts schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationRecordCounts
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_server_status schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationServerStatus
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_time_zone schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationTimeZone
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_uptime schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationUptime
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic notification_thinc_it schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.notification.Notification
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic notification_thinc_it schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_audio schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.opensmile.OpenSmile2AudioRecording
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_audio schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_completion_log schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.questionnaire.QuestionnaireCompletionLog
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_esm schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_patient_determined_disease_step schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_perceived_deficits_questionnaire schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_phq8 schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_rses schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_timezone schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationTimeZone
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic task_2MW_test schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.task.Task
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic task_romberg_test schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.task.Task
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic task_tandem_walking_test schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.task.Task
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_code_breaker schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItCodeBreaker
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_pdq5 schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItPdq
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_spotter schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItSpotter
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_symbol_check schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItSymbolCheck
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_trails schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItTrails
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Setting compatibility to FULL
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Compatibility set to FULL
+Schemas registered.
+*******************************************
+**  RADAR-base topics and schemas ready   **
+*******************************************
+Completed Updating config for entity: topic '_schemas'.
+==> Configuring MongoDB Connector
+==> Configuring HDFS Connector
+==> Configuring Management Portal
+Sending build context to Docker daemon  4.608kB
+
+Step 1/4 : ARG POSTGRES_VERSION=10.6-alpine
+Step 2/4 : FROM postgres:${POSTGRES_VERSION}
+ ---> 39895ca06dde
+Step 3/4 : COPY ./multi-db-init.sh /docker-entrypoint-initdb.d/multi-db-init.sh
+ ---> 3301b578889f
+Step 4/4 : COPY ./on-db-ready /usr/bin/on-db-ready
+ ---> 37b369c70be7
+Successfully built 37b369c70be7
+Successfully tagged radarbase/postgres:10.6-alpine-1
+Waiting for postgres database...
+Database ready.
+Multiple database creation requested: managementportal,restsourceauthorizer
+Database managementportal already exists
+Database restsourceauthorizer already exists
+Databases created
+--> ECDSA keypair for signing JWTs already exists. Not creating a new one.
+--> RSA keypair for signing JWTs already exists. Not creating a new one.
+--> Updating public keys of signatures
+==> Configuring REST-API
+==> Configuring Kafka-manager
+==> Configuring nginx
+==> Starting RADAR-base Platform
+### SUCCESS ###
+OS version: Linux tintin-OptiPlex-5060 5.8.0-44-generic #50~20.04.1-Ubuntu SMP Wed Feb 10 21:07:30 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+docker version: Docker version 20.10.5, build 55c4c88
+docker-compose version: docker-compose version 1.28.5, build c4eb3a1f
+==> Creating docker network - hadoop ALREADY EXISTS
+==> Checking docker external volumes
+certs
+certs-data
+==> Setting up topics
+Compiling schemas...
+===> Independent schemas:
+merged/commons/active/notification/notification.avsc
+merged/commons/active/opensmile/open_smile_2_audio_analysis.avsc
+merged/commons/active/opensmile/open_smile_2_audio_recording.avsc
+merged/commons/active/questionnaire/questionnaire.avsc
+merged/commons/active/task/task.avsc
+merged/commons/active/thincit/thinc_it_input_type.avsc
+merged/commons/active/thincit/thinc_it_trails.avsc
+merged/commons/catalogue/processing_state.avsc
+merged/commons/catalogue/time_window.avsc
+merged/commons/catalogue/unit.avsc
+merged/commons/connector/fitbit/fitbit_activity_heart_rate.avsc
+merged/commons/connector/fitbit/fitbit_activity_levels.avsc
+merged/commons/connector/fitbit/fitbit_intraday_heart_rate.avsc
+merged/commons/connector/fitbit/fitbit_intraday_steps.avsc
+merged/commons/connector/fitbit/fitbit_manual_data_entry.avsc
+merged/commons/connector/fitbit/fitbit_sleep_classic.avsc
+merged/commons/connector/fitbit/fitbit_sleep_stage.avsc
+merged/commons/connector/fitbit/fitbit_source.avsc
+merged/commons/connector/fitbit/fitbit_time_zone.avsc
+merged/commons/kafka/aggregate_key.avsc
+merged/commons/kafka/observation_key.avsc
+merged/commons/kafka/record_set.avsc
+merged/commons/monitor/application/application_device_info.avsc
+merged/commons/monitor/application/application_external_time.avsc
+merged/commons/monitor/application/application_record_counts.avsc
+merged/commons/monitor/application/application_server_status.avsc
+merged/commons/monitor/application/application_time_zone.avsc
+merged/commons/monitor/application/application_uptime.avsc
+merged/commons/monitor/questionnaire/questionnaire_completion_log.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_acceleration.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_battery_level.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_blood_pulse_wave.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_energy.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_galvanic_skin_response.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_heart_rate.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_heart_rate_variability.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_led_current.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_oxygen_saturation.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_ppg_raw.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_respiration_rate.avsc
+merged/commons/passive/biovotion/biovotion_vsm1_temperature.avsc
+merged/commons/passive/bittium/bittium_faros_acceleration.avsc
+merged/commons/passive/bittium/bittium_faros_battery_level.avsc
+merged/commons/passive/bittium/bittium_faros_ecg.avsc
+merged/commons/passive/bittium/bittium_faros_inter_beat_interval.avsc
+merged/commons/passive/bittium/bittium_faros_temperature.avsc
+merged/commons/passive/empatica/empatica_e4_acceleration.avsc
+merged/commons/passive/empatica/empatica_e4_battery_level.avsc
+merged/commons/passive/empatica/empatica_e4_blood_volume_pulse.avsc
+merged/commons/passive/empatica/empatica_e4_electrodermal_activity.avsc
+merged/commons/passive/empatica/empatica_e4_inter_beat_interval.avsc
+merged/commons/passive/empatica/empatica_e4_sensor_status.avsc
+merged/commons/passive/empatica/empatica_e4_tag.avsc
+merged/commons/passive/empatica/empatica_e4_temperature.avsc
+merged/commons/passive/opensmile/open_smile_2_phone_audio.avsc
+merged/commons/passive/pebble/pebble2_acceleration.avsc
+merged/commons/passive/pebble/pebble2_battery_level.avsc
+merged/commons/passive/pebble/pebble2_heart_rate.avsc
+merged/commons/passive/pebble/pebble2_heart_rate_filtered.avsc
+merged/commons/passive/phone/phone_acceleration.avsc
+merged/commons/passive/phone/phone_battery_level.avsc
+merged/commons/passive/phone/phone_bluetooth_devices.avsc
+merged/commons/passive/phone/phone_call.avsc
+merged/commons/passive/phone/phone_contact_list.avsc
+merged/commons/passive/phone/phone_gyroscope.avsc
+merged/commons/passive/phone/phone_light.avsc
+merged/commons/passive/phone/phone_magnetic_field.avsc
+merged/commons/passive/phone/phone_relative_location.avsc
+merged/commons/passive/phone/phone_sms.avsc
+merged/commons/passive/phone/phone_sms_unread.avsc
+merged/commons/passive/phone/phone_step_count.avsc
+merged/commons/passive/phone/phone_usage_event.avsc
+merged/commons/passive/phone/phone_user_interaction.avsc
+merged/commons/passive/ppg/phone_camera_ppg.avsc
+merged/commons/passive/weather/local_weather.avsc
+merged/commons/stream/aggregator/numeric_aggregate.avsc
+merged/commons/stream/aggregator/phone_usage_aggregate.avsc
+merged/commons/stream/source_statistics.avsc
+===> Dependent schemas:
+merged/commons/active/thincit/thinc_it_code_breaker.avsc
+merged/commons/active/thincit/thinc_it_pdq.avsc
+merged/commons/active/thincit/thinc_it_spotter.avsc
+merged/commons/active/thincit/thinc_it_symbol_check.avsc
+merged/commons/connector/fitbit/fitbit_activity_log_record.avsc
+merged/commons/stream/aggregator/aggregate_list.avsc
+Creating RADAR-base topics...
+[main] INFO kafka.utils.Log4jControllerRegistration$ - Registered kafka:type=kafka.Log4jController MBean
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Initializing a new session to zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181.
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.13-2d71af4dbe22557fda74f9a9b4309b15a7487f03, built on 06/29/2018 00:39 GMT
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:host.name=3224be5db690
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.version=11.0.10
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.home=/usr/local/openjdk-11
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/usr/lib/radar-schemas-tools-0.5.1.jar:/usr/lib/radar-schemas-commons-0.5.1.jar:/usr/lib/radar-commons-server-0.12.1.jar:/usr/lib/radar-commons-0.12.1.jar:/usr/lib/kafka-connect-avro-converter-5.2.1.jar:/usr/lib/kafka-schema-registry-5.2.1.jar:/usr/lib/kafka-avro-serializer-5.2.1.jar:/usr/lib/kafka-schema-registry-client-5.2.1.jar:/usr/lib/avro-1.8.2.jar:/usr/lib/kafka_2.12-2.2.0-cp2.jar:/usr/lib/connect-json-2.2.0-cp2.jar:/usr/lib/jersey-media-json-jackson-2.28.jar:/usr/lib/jackson-datatype-jdk8-2.9.8.jar:/usr/lib/rest-utils-5.2.1.jar:/usr/lib/jackson-jaxrs-json-provider-2.9.8.jar:/usr/lib/jackson-module-jaxb-annotations-2.9.8.jar:/usr/lib/jackson-jaxrs-base-2.9.8.jar:/usr/lib/jackson-databind-2.9.9.jar:/usr/lib/jersey-container-servlet-2.27.jar:/usr/lib/jersey-container-servlet-core-2.28.jar:/usr/lib/jersey-bean-validation-2.27.jar:/usr/lib/jersey-server-2.28.jar:/usr/lib/hibernate-validator-5.1.3.Final.jar:/usr/lib/validation-api-2.0.1.Final.jar:/usr/lib/jackson-dataformat-yaml-2.9.9.jar:/usr/lib/argparse4j-0.8.1.jar:/usr/lib/okhttp-3.14.1.jar:/usr/lib/javax-websocket-server-impl-9.4.14.v20181114.jar:/usr/lib/websocket-server-9.4.14.v20181114.jar:/usr/lib/jetty-annotations-9.4.14.v20181114.jar:/usr/lib/jetty-plus-9.4.14.v20181114.jar:/usr/lib/jetty-webapp-9.4.14.v20181114.jar:/usr/lib/jetty-servlet-9.4.17.v20190418.jar:/usr/lib/jetty-jaas-9.4.14.v20181114.jar:/usr/lib/jetty-security-9.4.17.v20190418.jar:/usr/lib/jetty-server-9.4.17.v20190418.jar:/usr/lib/slf4j-simple-1.7.26.jar:/usr/lib/jersey-hk2-2.28.jar:/usr/lib/jackson-mapper-asl-1.9.13.jar:/usr/lib/jackson-core-asl-1.9.13.jar:/usr/lib/connect-api-2.2.0-cp2.jar:/usr/lib/kafka-clients-2.2.0-cp2.jar:/usr/lib/metrics-core-2.2.0.jar:/usr/lib/scala-logging_2.12-3.9.0.jar:/usr/lib/common-config-5.2.1.jar:/usr/lib/common-metrics-5.2.1.jar:/usr/lib/common-utils-5.2.1.jar:/usr/lib/zkclient-0.11.jar:/usr/lib/zookeeper-3.4.13.jar:/usr/lib/slf4j-api-1.7.26.jar:/usr/lib/jackson-annotations-2.9.8.jar:/usr/lib/jackson-core-2.9.9.jar:/usr/lib/jopt-simple-5.0.4.jar:/usr/lib/scala-reflect-2.12.8.jar:/usr/lib/scala-library-2.12.8.jar:/usr/lib/jersey-client-2.28.jar:/usr/lib/jersey-media-jaxb-2.28.jar:/usr/lib/jersey-common-2.28.jar:/usr/lib/hk2-locator-2.5.0.jar:/usr/lib/hk2-api-2.5.0.jar:/usr/lib/hk2-utils-2.5.0.jar:/usr/lib/jakarta.inject-2.5.0.jar:/usr/lib/jersey-entity-filtering-2.28.jar:/usr/lib/jakarta.ws.rs-api-2.1.5.jar:/usr/lib/snakeyaml-1.23.jar:/usr/lib/json-20180813.jar:/usr/lib/okio-1.17.2.jar:/usr/lib/websocket-servlet-9.4.14.v20181114.jar:/usr/lib/javax.servlet-api-3.1.0.jar:/usr/lib/jetty-servlets-9.4.14.v20181114.jar:/usr/lib/javax-websocket-client-impl-9.4.14.v20181114.jar:/usr/lib/websocket-client-9.4.14.v20181114.jar:/usr/lib/jetty-client-9.4.14.v20181114.jar:/usr/lib/jetty-http-9.4.17.v20190418.jar:/usr/lib/websocket-common-9.4.14.v20181114.jar:/usr/lib/jetty-io-9.4.17.v20190418.jar:/usr/lib/jakarta.annotation-api-1.3.4.jar:/usr/lib/zstd-jni-1.3.8-1.jar:/usr/lib/lz4-java-1.5.0.jar:/usr/lib/snappy-java-1.1.7.2.jar:/usr/lib/audience-annotations-0.5.0.jar:/usr/lib/osgi-resource-locator-1.0.1.jar:/usr/lib/paranamer-2.7.jar:/usr/lib/commons-compress-1.8.1.jar:/usr/lib/xz-1.5.jar:/usr/lib/jetty-jmx-9.4.14.v20181114.jar:/usr/lib/jetty-jndi-9.4.14.v20181114.jar:/usr/lib/jetty-xml-9.4.14.v20181114.jar:/usr/lib/jetty-util-9.4.17.v20190418.jar:/usr/lib/javax.inject-2.5.0-b42.jar:/usr/lib/javax.el-2.2.4.jar:/usr/lib/javax.el-api-2.2.4.jar:/usr/lib/javax.ws.rs-api-2.1.1.jar:/usr/lib/jaxb-api-2.3.0.jar:/usr/lib/activation-1.1.1.jar:/usr/lib/aopalliance-repackaged-2.5.0.jar:/usr/lib/javassist-3.22.0-CR2.jar:/usr/lib/jline-0.9.94.jar:/usr/lib/netty-3.10.6.Final.jar:/usr/lib/jboss-logging-3.1.3.GA.jar:/usr/lib/classmate-1.0.0.jar:/usr/lib/javax.websocket-api-1.0.jar:/usr/lib/jetty-continuation-9.4.14.v20181114.jar:/usr/lib/log4j-1.2.17.jar:/usr/lib/javax.annotation-api-1.2.jar:/usr/lib/asm-commons-7.0.jar:/usr/lib/asm-analysis-7.0.jar:/usr/lib/asm-tree-7.0.jar:/usr/lib/asm-7.0.jar:/usr/lib/javax.websocket-client-api-1.0.jar:/usr/lib/websocket-api-9.4.14.v20181114.jar
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.name=Linux
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.version=5.8.0-44-generic
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.name=root
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.home=/root
+[main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/schema
+[main] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181 sessionTimeout=15000 watcher=kafka.zookeeper.ZooKeeperClient$ZooKeeperClientWatcher$@502f1f4c
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Waiting until connected.
+[main-SendThread(zookeeper-3:2181)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server zookeeper-3/172.27.0.4:2181. Will not attempt to authenticate using SASL (unknown error)
+[main-SendThread(zookeeper-3:2181)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to zookeeper-3/172.27.0.4:2181, initiating session
+[main-SendThread(zookeeper-3:2181)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server zookeeper-3/172.27.0.4:2181, sessionid = 0x3781396e18f0002, negotiated timeout = 15000
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Connected.
+[main] INFO org.radarcns.schema.registration.KafkaTopics - Kafka brokers available. Waiting for topics to become available.
+[main] INFO org.apache.kafka.clients.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [PLAINTEXT://kafka-1:9092, PLAINTEXT://kafka-2:9092, PLAINTEXT://kafka-3:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.2.0-cp2
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: c4bca159dd111016
+[main] INFO org.radarcns.schema.registration.KafkaTopics - Creating topics. Topics marked with [*] already exist.
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_acceleration_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_battery_level_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_blood_volume_pulse_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_energy_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_galvanic_skin_response_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_heartrate_variability_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_led_current_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_oxygen_saturation_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_ppg_raw_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_respiration_rate_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_biovotion_vsm1_temperature_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_ecg
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_inter_beat_interval
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_bittium_faros_temperature
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_acceleration_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_battery_level_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_blood_volume_pulse_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_electrodermal_activity_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heart_rate_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_heartrate_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_inter_beat_interval_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_sensor_status
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_empatica_e4_temperature_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_local_weather
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_pebble_2_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_pebble_2_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_pebble_2_heartrate
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_pebble_2_heartrate_filtered
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_acceleration_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_10min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_10sec
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_1day
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_1hour
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_1min
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_battery_level_1week
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_bluetooth_devices
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_call
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_contacts
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_gyroscope
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_light
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_magnetic_field
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_ppg
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_relative_location
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_sms
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_sms_unread
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_step_count
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_usage_event
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_usage_event_aggregated
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_usage_event_output
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_phone_user_interaction
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] android_processed_audio
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_device_info
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_external_time
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_record_counts
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_server_status
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_time_zone
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] application_uptime
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_activity_log
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_intraday_heart_rate
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_intraday_steps
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_sleep_classic
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_sleep_stages
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] connect_fitbit_time_zone
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] notification_thinc_it
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_audio
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_completion_log
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_esm
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_patient_determined_disease_step
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_perceived_deficits_questionnaire
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_phq8
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_rses
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] questionnaire_timezone
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] source_statistics_android_phone
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] source_statistics_biovotion_vsm1
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] source_statistics_empatica_e4
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] task_2MW_test
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] task_romberg_test
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] task_tandem_walking_test
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_code_breaker
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_pdq5
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_spotter
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_symbol_check
+[main] INFO org.radarcns.schema.registration.KafkaTopics - [ ] thincit_trails
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Closing.
+[main] INFO org.apache.zookeeper.ZooKeeper - Session: 0x3781396e18f0002 closed
+[main-EventThread] INFO org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x3781396e18f0002
+[main] INFO kafka.zookeeper.ZooKeeperClient - [ZooKeeperClient] Closed.
+Topics created.
+Registering RADAR-base schemas...
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Setting compatibility to NONE
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Compatibility set to NONE
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1Acceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1BatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_blood_volume_pulse schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1BloodPulseWave
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_energy schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1Energy
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_galvanic_skin_response schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1GalvanicSkinResponse
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_heartrate schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1HeartRate
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_heartrate_variability schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1HeartRateVariability
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_led_current schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1LedCurrent
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_oxygen_saturation schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1OxygenSaturation
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_ppg_raw schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1PpgRaw
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_respiration_rate schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1RespirationRate
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_biovotion_vsm1_temperature schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.biovotion.BiovotionVsm1Temperature
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosAcceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosBatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_ecg schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosEcg
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_inter_beat_interval schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosInterBeatInterval
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_bittium_faros_temperature schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.bittium.BittiumFarosTemperature
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4Acceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4BatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_blood_volume_pulse schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4BloodVolumePulse
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_electrodermal_activity schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4ElectroDermalActivity
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_inter_beat_interval schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4InterBeatInterval
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_sensor_status schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4SensorStatus
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_empatica_e4_temperature schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.empatica.EmpaticaE4Temperature
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_local_weather schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.weather.LocalWeather
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_pebble_2_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.pebble.Pebble2Acceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_pebble_2_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.pebble.Pebble2BatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_pebble_2_heartrate schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.pebble.Pebble2HeartRate
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_pebble_2_heartrate_filtered schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.pebble.Pebble2HeartRateFiltered
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_acceleration schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneAcceleration
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_battery_level schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneBatteryLevel
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_bluetooth_devices schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneBluetoothDevices
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_call schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneCall
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_contacts schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneContactList
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_gyroscope schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneGyroscope
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_light schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneLight
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_magnetic_field schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneMagneticField
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_ppg schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.ppg.PhoneCameraPpg
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_relative_location schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneRelativeLocation
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_sms schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneSms
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_sms_unread schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneSmsUnread
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_step_count schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneStepCount
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_usage_event schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneUsageEvent
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_phone_user_interaction schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.phone.PhoneUserInteraction
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic android_processed_audio schemas: org.radarcns.kafka.ObservationKey - org.radarcns.passive.opensmile.OpenSmile2PhoneAudio
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_device_info schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationDeviceInfo
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_external_time schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationExternalTime
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_record_counts schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationRecordCounts
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_server_status schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationServerStatus
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_time_zone schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationTimeZone
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic application_uptime schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationUptime
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic notification_thinc_it schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.notification.Notification
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic notification_thinc_it schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_audio schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.opensmile.OpenSmile2AudioRecording
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_audio schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_completion_log schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.questionnaire.QuestionnaireCompletionLog
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_esm schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_patient_determined_disease_step schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_perceived_deficits_questionnaire schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_phq8 schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_rses schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.questionnaire.Questionnaire
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic questionnaire_timezone schemas: org.radarcns.kafka.ObservationKey - org.radarcns.monitor.application.ApplicationTimeZone
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic task_2MW_test schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.task.Task
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic task_romberg_test schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.task.Task
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic task_tandem_walking_test schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.task.Task
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_code_breaker schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItCodeBreaker
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_pdq5 schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItPdq
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_spotter schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItSpotter
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_symbol_check schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItSymbolCheck
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Registering topic thincit_trails schemas: org.radarcns.kafka.ObservationKey - org.radarcns.active.thincit.ThincItTrails
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Setting compatibility to FULL
+[main] INFO org.radarcns.schema.registration.SchemaRegistry - Compatibility set to FULL
+Schemas registered.
+*******************************************
+**  RADAR-base topics and schemas ready   **
+*******************************************
+Completed Updating config for entity: topic '_schemas'.
+==> Configuring MongoDB Connector
+==> Configuring HDFS Connector
+==> Configuring Management Portal
+Sending build context to Docker daemon  4.608kB
+
+Step 1/4 : ARG POSTGRES_VERSION=10.6-alpine
+Step 2/4 : FROM postgres:${POSTGRES_VERSION}
+ ---> 39895ca06dde
+Step 3/4 : COPY ./multi-db-init.sh /docker-entrypoint-initdb.d/multi-db-init.sh
+ ---> 6a3ed77c63ae
+Step 4/4 : COPY ./on-db-ready /usr/bin/on-db-ready
+ ---> da3edcebcfda
+Successfully built da3edcebcfda
+Successfully tagged radarbase/postgres:10.6-alpine-1
+Waiting for postgres database...
+Database ready.
+Multiple database creation requested: managementportal,restsourceauthorizer
+Database managementportal already exists
+Database restsourceauthorizer already exists
+Databases created
+--> ECDSA keypair for signing JWTs already exists. Not creating a new one.
+--> RSA keypair for signing JWTs already exists. Not creating a new one.
+--> Updating public keys of signatures
+==> Configuring REST-API
+==> Configuring Kafka-manager
+==> Configuring nginx
+==> Generating self-signed certificate
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.7/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.7/community/x86_64/APKINDEX.tar.gz
+v3.7.3-184-gffd32bfd09 [http://dl-cdn.alpinelinux.org/alpine/v3.7/main]
+v3.7.3-194-gcddd1b2302 [http://dl-cdn.alpinelinux.org/alpine/v3.7/community]
+OK: 9054 distinct packages available
+(1/3) Installing libcrypto1.0 (1.0.2t-r0)
+(2/3) Installing libssl1.0 (1.0.2t-r0)
+(3/3) Installing openssl (1.0.2t-r0)
+Executing busybox-1.27.2-r11.trigger
+OK: 8 MiB in 16 packages
+==> Starting RADAR-base Platform
+==> Requesting Let's Encrypt SSL certificate for flourish-dcu.computing.dcu.ie
+Reloading webserver configuration
+### SUCCESS ###
