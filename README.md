@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # RADAR-Docker 2.2.0
 
 
@@ -100,3 +101,7 @@ $ docker-compose up
 ### Multi-host setup
 
 In the end, we aim to deploy the platform in a multi-host environment. We are currently aiming for a deployment with Docker Swarm. This setup uses features that are not yet released in the stable Docker Engine. Once they are, this stack may become the main Docker stack. See the `wip/radar-swarm-cp-stack/` directory for more information.
+=======
+# fourish-radar-base
+This is radar-base platfrm deployed for flourish project
+>>>>>>> 9ad6808f9d257bc3be2b17d923b19f8073c34146
