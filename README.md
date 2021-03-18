@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # RADAR-Docker 2.2.0
 
 
